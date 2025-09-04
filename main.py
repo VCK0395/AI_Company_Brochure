@@ -29,9 +29,10 @@ def stream_gpt(prompt):
         {"role": "user", "content": prompt}
       ]
   # The system message is passed as a 'system_instruction' to the model.
-    model = genai.GenerativeModel(
-        model_name='gemini-2.5-flash', # A fast and capable model, similar to gpt-4o-mini.
-        system_instruction=system_instruction
+    stream = genai.GenerativeModel(
+        model_name='gemini-2.5-flash', 
+      messages=messages,
+      stream=True
     )
 
     # The user prompt is passed to generate_content().
@@ -43,10 +44,9 @@ def stream_gpt(prompt):
         messages=messages,
         stream=True
     )
+    return completion.choices[0].message.content
     result = ""
-    for chunk in stream:
-        result += chunk.choices[0].delta.content or ""
-        yield result
+
 # A class to represent a Webpage
 
 # Some websites need you to use proper headers when fetching them:
