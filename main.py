@@ -1,6 +1,7 @@
 # imports
 
 
+
 import os
 import requests
 from bs4 import BeautifulSoup
@@ -22,31 +23,20 @@ else:
 
 google.generativeai.configure()
 
+system_message = 'you are a helpful assistant'
 
 
-def stream_gpt(prompt):
-    messages = [
-        {"role": "system", "content": system_message},
-        {"role": "user", "content": prompt}
-      ]
-  # The system message is passed as a 'system_instruction' to the model.
-    stream = genai.GenerativeModel(
-        model_name='gemini-2.5-flash', 
-      messages=messages,
-      stream=True
+
+def stream_gemini(prompt):
+   model = genai.GenerativeModel(
+        model_name='gemini-1.5-flash', # A fast and capable model, similar to gpt-4o-mini.
+        system_instruction=system_message
     )
 
     # The user prompt is passed to generate_content().
-    completion = model.generate_content(user_prompt_content)
+    completion = model.generate_content(prompt)
+    
 
-  
-    stream = openai.chat.completions.create(
-        model='gpt-4o-mini',
-        messages=messages,
-        stream=True
-    )
-    return completion.choices[0].message.content
-    result = ""
 
 # A class to represent a Webpage
 
