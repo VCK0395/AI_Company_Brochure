@@ -67,11 +67,11 @@ if __name__ == "__main__":
 Efficiency and Precision
 Manually inspecting every link on a large company's homepage is time-consuming and prone to human error. This tool provides an efficient, machine-guided approach:
 
-1.    Saves Time: Quickly filters out utility links (/privacy, /terms) and social media links, focusing only on high-value corporate information.
+1. Saves Time: Quickly filters out utility links (/privacy, /terms) and social media links, focusing only on high-value corporate information.
 
-2.    Structured Output: By enforcing a JSON response, the data is immediately usable in other scripts, databases, or documents without complex string parsing.
+2. tructured Output: By enforcing a JSON response, the data is immediately usable in other scripts, databases, or documents without complex string parsing.
 
-3.    Adaptable: The system prompt can be easily modified to search for different types of links or information (e.g., investor relations, product documentation, etc.) by simply updating the link_system_prompt.
+3. daptable: The system prompt can be easily modified to search for different types of links or information (e.g., investor relations, product documentation, etc.) by simply updating the link_system_prompt.
 
 This project showcases a powerful and practical application of combining traditional web scraping with advanced Large Language Model (LLM) capabilities for intelligent data filtering.
 
