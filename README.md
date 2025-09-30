@@ -64,14 +64,14 @@ if __name__ == "__main__":
 
 ## 🎯 Why This Project 
 
-Mastering the ML Pipeline
-This project serves as an excellent demonstration of a complete, end-to-end Machine Learning pipeline, which is crucial for real-world data science tasks:
+Efficiency and Precision
+Manually inspecting every link on a large company's homepage is time-consuming and prone to human error. This tool provides an efficient, machine-guided approach:
 
-Handling Real-World Data Issues: The code effectively addresses the challenge of missing values, which are common in real-world datasets, by implementing appropriate imputation strategies for both numerical and categorical features.
+1.    Saves Time: Quickly filters out utility links (/privacy, /terms) and social media links, focusing only on high-value corporate information.
 
-Essential Preprocessing Steps: It highlights the necessity of One-Hot Encoding for categorical data and MinMaxScaler for feature scaling, both of which are critical steps for models like Logistic Regression.
+2.    Structured Output: By enforcing a JSON response, the data is immediately usable in other scripts, databases, or documents without complex string parsing.
 
-Robust Model Optimization: The use of GridSearchCV demonstrates best practices for model optimization, ensuring the final model is not only trained but also fine-tuned for better predictive power and generalization on unseen data.
+3.    Adaptable: The system prompt can be easily modified to search for different types of links or information (e.g., investor relations, product documentation, etc.) by simply updating the link_system_prompt.
 
-This project validates the importance of data preprocessing and hyperparameter tuning in achieving high-performing and reliable classification models.
+This project showcases a powerful and practical application of combining traditional web scraping with advanced Large Language Model (LLM) capabilities for intelligent data filtering.
 
