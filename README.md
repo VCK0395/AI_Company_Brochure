@@ -26,7 +26,7 @@ You'll need the following installed:
 
 ### Setup
 
-1.  **Clone the Repository** (assuming you'll place the code in a file like `analyzer.py`):
+1.  **Clone the Repository** 
     ```bash
     git clone [your-repo-url]
     cd [your-repo-name]
